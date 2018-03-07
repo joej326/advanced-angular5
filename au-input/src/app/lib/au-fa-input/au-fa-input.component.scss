@@ -1,0 +1,21 @@
+
+.icon {
+  width: 20px;
+  text-align: center;
+  background: white;
+  padding: 0px 2px 0px 5px;
+  outline: none;
+  border: none;
+}
+
+//host is an angular feature that applies to the parent element
+:host {
+  border: 1px solid lightgray;
+  padding-bottom: 1px;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
