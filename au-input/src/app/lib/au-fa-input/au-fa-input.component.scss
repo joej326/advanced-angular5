@@ -2,7 +2,6 @@
 .icon {
   width: 20px;
   text-align: center;
-  background: white;
   padding: 0px 2px 0px 5px;
   outline: none;
   border: none;
@@ -11,11 +10,17 @@
 //host is an angular feature that applies to the parent element
 :host {
   border: 1px solid lightgray;
+  background: white;
   padding-bottom: 1px;
+  height: 30px;
+  display: inline-block;
 }
 
 input {
   border: none;
+  height: 100%;
+  box-sizing: border-box;
+  margin: 1px 0;
   outline: none;
 }
 
