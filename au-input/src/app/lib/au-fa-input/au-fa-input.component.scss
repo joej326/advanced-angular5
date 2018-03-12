@@ -16,7 +16,8 @@
   display: inline-block;
 }
 
-input {
+// deep allows you to style elements inside of ng-content
+:host /deep/ input {
   border: none;
   height: 100%;
   box-sizing: border-box;
