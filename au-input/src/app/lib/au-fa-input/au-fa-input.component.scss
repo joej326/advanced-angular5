@@ -16,6 +16,7 @@
   display: inline-block;
 }
 
+// this is saying style the parent's input-focus class
 :host(.input-focus) {
   outline: none;
   border: 1px solid #4D90FE;

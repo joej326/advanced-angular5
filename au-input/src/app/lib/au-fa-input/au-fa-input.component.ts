@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ContentChild, AfterContentInit } from '@angular/core';
 import { InputRefDirective } from 'app/lib/common/input-ref.directive';
+import { HostBinding } from '@angular/core';
 
 
 @Component({
@@ -23,6 +24,16 @@ export class AuFaInputComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit() {
     console.log('input', this.input);
+    if (!this.input) {
+      console.error('error');
+    }
+  }
+
+  // this works with our directive to dtermine whether or not the input-focus class should be applied
+  // note that our directive is set to be applied to every input element inside our au-fa-inout components (see directive selector)
+  @HostBinding('class.input-focus')
+  get isInputFocus(): boolean {
+    return this.input ? this.input.focus : false;
   }
 
   getClasses() {
