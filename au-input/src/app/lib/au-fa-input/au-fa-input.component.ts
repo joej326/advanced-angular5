@@ -29,8 +29,10 @@ export class AuFaInputComponent implements OnInit, AfterContentInit {
     }
   }
 
-  // this works with our directive to dtermine whether or not the input-focus class should be applied
-  // note that our directive is set to be applied to every input element inside our au-fa-inout components (see directive selector)
+  // HostBinding binds the directive to a property on our host.
+  // this works with our directive to dtermine whether or not the input-focus class should be applied.
+  // note that our directive is set to be applied to every input element inside our au-fa-inout components (see directive selector).
+  //  So the "Host" is the inputs
   @HostBinding('class.input-focus')
   get isInputFocus(): boolean {
     return this.input ? this.input.focus : false;
